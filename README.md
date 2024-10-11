@@ -27,3 +27,7 @@ O **Sistema de Moeda Estudantil** é uma plataforma desenvolvida para incentivar
 * US10 - Como empresa parceira eu desejo cadastrar uma vantagem adicionando a descrição e foto do produto para que usuários tenham reconhecimento da vantagem.
 * US11 - Como empresa parceira eu desejo receber email com o código de resgate do aluno quando ele utilizar uma vantagem para validar o uso do benefício oferecido.
 * US12 - Como  usuário do sistema desejo ter um login e senha cadastrados para acessar o sistema para que eu possa acessar minhas funcionalidades específicas de acordo com meu papel no sistema 
+
+## Diagrama de Caso de Uso
+
+![](/documentacao/imagens/diagrama-de-caso-de-uso.png)
