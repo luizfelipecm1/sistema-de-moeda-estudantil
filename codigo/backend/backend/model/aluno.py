@@ -6,4 +6,6 @@ from model.instituicao import InstituicaoEnsino
 class Aluno(Usuario):
     matricula: str
     curso: str
+    rg: str
+    endereco: str
     instituicao: InstituicaoEnsino 

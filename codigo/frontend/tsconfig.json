@@ -3,5 +3,12 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx", // Suporta JSX com React 17+
+    "esModuleInterop": true, // Para interoperabilidade entre módulos ES e CommonJS
+    "allowSyntheticDefaultImports": true, // Permite importar padrões de módulos sem padrões
+    "skipLibCheck": true, // Ignora a checagem de bibliotecas, útil para evitar erros de tipagem em dependências
+    "moduleResolution": "node" // Usa o sistema de resolução de módulos do Node.js
+  }
 }
