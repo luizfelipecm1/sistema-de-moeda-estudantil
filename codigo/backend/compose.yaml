@@ -21,8 +21,14 @@ services:
     build: .
     restart: always
     ports:
-      - "8000:80"
+      - "8000:8000"
     depends_on:
       - db
     environment:
-      DATABASE_URL: postgres://postgres:mysecretpassword@db:5432/postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_SERVER: db
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: db
+    volumes:
+      - ./app:/app

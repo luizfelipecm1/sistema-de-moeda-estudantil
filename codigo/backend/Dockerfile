@@ -11,4 +11,4 @@ WORKDIR /app
 
 COPY ./app /app
 
-CMD ["poetry", "run", "fastapi", "run", "/app/main.py", "--port", "80"]
+CMD ["poetry", "run", "fastapi", "run", "/app/main.py"]
