@@ -6,9 +6,12 @@ authors = ["marcusvco <marcuscarvalhodeoliveira@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
-fastapi = {extras = ["standard"], version = "^0.115.2"}
+python = "^3.10"
+fastapi = {extras = ["standard"], version = "^0.115.3"}
 
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
 
 [build-system]
 requires = ["poetry-core"]
