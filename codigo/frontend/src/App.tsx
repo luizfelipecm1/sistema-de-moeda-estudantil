@@ -1,31 +1,53 @@
 // src/App.tsx
 import React from 'react';
-import { AuthProvider } from './context/AuthContext';
-import AppRoutes from './routes/AppRoutes';
-import './styles/global.css';
-
-// Importação do PrimeReactProvider
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { PrimeReactProvider } from 'primereact/api';
 
-// Importação dos estilos do PrimeReact (você pode trocar o tema aqui)
-import 'primereact/resources/themes/saga-blue/theme.css';  // ou outro tema
-import 'primereact/resources/primereact.min.css';           // estilos principais
-import 'primeicons/primeicons.css';                         // ícones
+
+// Contexto de autenticação
+import { AuthProvider } from './context/AuthContext';
+
+// Páginas
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import StudentDashboard from './pages/Dashboard/StudentDashboard';
+import TeacherDashboard from './pages/Dashboard/TeacherDashboard';
+import PartnerDashboard from './pages/Dashboard/PartnerDashboard';
+import Transactions from './pages/Transactions';
+
+// Estilos globais e PrimeReact
+import './styles/global.css';
+import 'primereact/resources/themes/saga-blue/theme.css';  // Tema PrimeReact
+import 'primereact/resources/primereact.min.css';          // Estilos PrimeReact
+import 'primeicons/primeicons.css';                        // Ícones PrimeIcons
 
 function App() {
   return (
     <PrimeReactProvider
       value={{
-        ripple: true, // Habilita efeito ripple globalmente (opcional)
-        inputStyle: 'outlined', // Define o estilo global de inputs (filled ou outlined)
-        locale: 'pt-BR', // Define o idioma global para componentes (se necessário)
+        ripple: true,        // Efeito ripple nos botões
+        inputStyle: 'outlined', // Estilo padrão dos inputs
       }}
     >
       <AuthProvider>
-        <AppRoutes />
+        <Router>
+          <Routes>
+            {/* Rotas Públicas */}
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            {/* Rotas de Dashboards */}
+            <Route path="/dashboard/student" element={<StudentDashboard />} />
+            <Route path="/dashboard/teacher" element={<TeacherDashboard />} />
+            <Route path="/dashboard/partner" element={<PartnerDashboard />} />
+            {/* Rotas de Transações */}
+            <Route path="/transactions" element={<Transactions />} />
+          </Routes>
+        </Router>
       </AuthProvider>
     </PrimeReactProvider>
   );
 }
 
-export default App; // Certifique-se de que está exportando corretamente
+export default App;
