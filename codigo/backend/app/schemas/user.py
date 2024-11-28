@@ -16,11 +16,11 @@ class UserCreate(UserBase):
         orm_mode = True  # Para que o modelo Pydantic consiga trabalhar com o SQLModel (ORM)
 
 # Schema de resposta (para retorno de dados após a criação ou consulta)
-class UserRead(UserBase):
+class UserRead(BaseModel):
     id: UUID
-    aluno_id: Optional[UUID] = None
-    professor_id: Optional[UUID] = None
-    empresa_id: Optional[UUID] = None
+    username: str
+    email: Optional[str] = None
+    tipo_usuario: str
 
     class Config:
         orm_mode = True  # Para que o modelo Pydantic consiga trabalhar com o SQLModel (ORM)

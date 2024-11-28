@@ -7,6 +7,7 @@ class ProfessorCreate(BaseModel):
     cpf: str
     instituicao_ensino: Optional[str] = None
     departamento: Optional[str] = None
+    moedas: float
 
     class Config:
         orm_mode = True  # Permite que os dados do modelo SQLModel sejam convertidos para Pydantic

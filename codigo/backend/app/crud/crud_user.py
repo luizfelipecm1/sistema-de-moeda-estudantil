@@ -16,6 +16,11 @@ def hash_password(password: str) -> str:
 
 def create_user(session: Session, user_create: UserCreate) -> User:
     """Função para criar um novo usuário no sistema."""
+    
+    existing_user = session.exec(select(User).where(User.email == user_create.email)).first()
+    if existing_user:
+        raise HTTPException(status_code=400, detail="Email already registered")
+
     hashed_password = hash_password(user_create.password)  # Criptografa a senha
 
     db_obj = User(
