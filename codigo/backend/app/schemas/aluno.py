@@ -10,3 +10,4 @@ class AlunoCreate(BaseModel):
     endereco: str
     instituicao_ensino: Optional[str] = None
     curso: Optional[str] = None
+    moedas: float

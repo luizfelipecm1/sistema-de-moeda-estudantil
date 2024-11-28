@@ -2,7 +2,7 @@ from app.schemas import UserCreate, UserRead
 from app.models import User
 from sqlmodel import Session
 from sqlalchemy import select
-from uuid import uuid4
+from uuid import uuid4, UUID  # Importando UUID corretamente
 from passlib.context import CryptContext
 
 # Instanciando o contexto de criptografia para senha

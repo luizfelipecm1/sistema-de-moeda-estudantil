@@ -13,3 +13,4 @@ class Aluno(SQLModel, table=True):
     endereco: str = Field(default=None, index=True)
     instituicao_ensino: Optional[str] = Field(default=None)
     curso: Optional[str] = Field(default=None)
+    moedas: float = Field(default=0.0, description="Quantidade de moedas que o aluno possui")  # Novo campo

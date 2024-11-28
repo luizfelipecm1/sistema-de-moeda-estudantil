@@ -12,6 +12,7 @@ psycopg2-binary = "^2.9.10"
 sqlmodel = "^0.0.22"
 pydantic-settings = "^2.6.0"
 psycopg = {extras = ["binary"], version = "^3.2.3"}
+passlib = "^1.7.4"
 
 
 [tool.poetry.group.dev.dependencies]
