@@ -1,6 +1,7 @@
 from app.schemas import AlunoCreate
 from app.models import Aluno
 
+
 from sqlmodel import Session
 from sqlalchemy import select
 
