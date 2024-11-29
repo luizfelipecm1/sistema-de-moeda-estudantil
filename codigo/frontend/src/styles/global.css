@@ -1,12 +1,92 @@
+/* src/styles/global.css */
+
+/* Corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  /* Estilos adicionais */
+    font-family: 'Arial', sans-serif;        /* Usando fonte Arial */
+    background-color: #f5f5f5;              /* Cor de fundo suave */
+    margin: 0;                              /* Remove a margem padrão */
+    padding: 0;                             /* Remove o padding padrão */
+    display: flex;                          /* Usando Flexbox para centralizar conteúdo */
+    justify-content: center;                /* Alinha horizontalmente ao centro */
+    align-items: center;                    /* Alinha verticalmente ao centro */
+    min-height: 100vh;                       /* Ocupa 100% da altura da tela */
+}
+
+/* Estilos para títulos (h1) */
+h1 {
+    color: #333;                            /* Cor escura para contraste */
+    text-align: center;                     /* Alinha o título ao centro */
+    font-size: 2rem;                        /* Tamanho do título */
+    margin-bottom: 1rem;                    /* Espaço abaixo do título */
+}
+
+/* Estilos para parágrafos */
+p {
+    color: #666;                            /* Cor de texto mais suave */
+    text-align: center;                     /* Alinha o texto ao centro */
+    font-size: 1rem;                        /* Tamanho da fonte */
+    margin: 0.5rem 0;                       /* Margem em cima e embaixo */
+    max-width: 800px;                       /* Largura máxima para não ficar muito largo */
+}
+
+/* Estilos para o Card (usado em várias páginas) */
+.card {
+    background-color: #fff;                 /* Fundo branco para os cards */
+    border-radius: 8px;                      /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+    padding: 2rem;                           /* Espaçamento interno */
+    width: 100%;                             /* Largura completa (ajustável em elementos específicos) */
+    max-width: 450px;                        /* Limite máximo de largura */
+    margin: 1rem;                            /* Margem entre os cards */
+}
+
+/* Estilos para o botão */
+button {
+    background-color: #007bff;              /* Cor de fundo azul */
+    color: white;                           /* Texto branco */
+    border: none;                           /* Sem borda */
+    padding: 10px 20px;                     /* Espaçamento interno */
+    font-size: 1rem;                        /* Tamanho da fonte */
+    border-radius: 4px;                     /* Bordas arredondadas */
+    cursor: pointer;                        /* Cursor de pointer para interatividade */
+    transition: background-color 0.3s;       /* Transição suave para hover */
+}
+
+button:hover {
+    background-color: #0056b3;              /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilos para o formulário */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+}
+
+input, select, .p-password {
+    width: 100%;                            /* Inputs devem ocupar toda a largura do container */
+    padding: 10px;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo do Rodapé */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Aplique a classe no card se necessário em componentes */
+.card-content {
+    margin-bottom: 1rem;
+}
