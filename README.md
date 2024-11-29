@@ -43,3 +43,11 @@ O **Sistema de Moeda Estudantil** é uma plataforma desenvolvida para incentivar
 ## Modelo Entidade Relacionamento
 
 ![](/documentacao/imagens/Entidade-Relacionamento.png)
+
+## Diagrama de comunicação
+
+![](/documentacao/imagens/diagrama-de-comunicação.png)
+
+## Diagrama de implementação
+
+![](/documentacao/imagens/diagrama-de-implementação.png)
